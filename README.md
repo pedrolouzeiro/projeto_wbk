@@ -40,44 +40,44 @@ Usando `matplotlib.pyplot` e `seaborn`, vários gráficos foram plotados para vi
 
 A parte de aprendizado de máquina é dividida em sete etapas:
 
-#### 1. Pré-processamento de Dados
+    1. Pré-processamento de Dados
+    
+    O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `OneHotEncoder`.
 
-O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `OneHotEncoder`.
+    2. Padronização
+    
+    Os dados foram padronizados usando `RobustScaler` para lidar com outliers e trazer todas as características para uma escala semelhante.
 
-#### 2. Padronização
-
-Os dados foram padronizados usando `RobustScaler` para lidar com outliers e trazer todas as características para uma escala semelhante.
-
-#### 3. Balanceamento
-
-Para abordar o desequilíbrio de classes, foi utilizada a técnica `OverSample`, garantindo que o modelo não seja tendencioso em relação à classe majoritária.
-
-#### 4. Divisão de Treino e Teste
-
-O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
-
-#### 5. Seleção do Modelo
-
-Um algoritmo Random Forest foi utilizado para a previsão. Os resultados foram:
-```
-Relatório de Classificação:
-              precision    recall  f1-score   support
-
-          0       0.89      0.90      0.89       189
-          1       0.90      0.89      0.89       188
-
-   accuracy                           0.89       377
-  macro avg       0.89      0.89      0.89       377
-weighted avg       0.89      0.89      0.89       377
-```
-
-#### 6. Importância das Features
-
-As características mais importantes foram identificadas e plotadas, ajudando a entender quais fatores mais influenciam a inadimplência de empréstimos.
-
-#### 7. Salvamento do Modelo
-
-O modelo foi salvo usando a biblioteca `joblib` para previsões futuras.
+    3. Balanceamento
+    
+    Para abordar o desequilíbrio de classes, foi utilizada a técnica `OverSample`, garantindo que o modelo não seja tendencioso em relação à classe majoritária.
+    
+    4. Divisão de Treino e Teste
+    
+    O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
+    
+    5. Seleção do Modelo
+    
+    Um algoritmo Random Forest foi utilizado para a previsão. Os resultados foram:
+    ```
+    Relatório de Classificação:
+                  precision    recall  f1-score   support
+    
+              0       0.89      0.90      0.89       189
+              1       0.90      0.89      0.89       188
+    
+       accuracy                           0.89       377
+      macro avg       0.89      0.89      0.89       377
+    weighted avg       0.89      0.89      0.89       377
+    ```
+    
+    6. Importância das Features
+    
+    As características mais importantes foram identificadas e plotadas, ajudando a entender quais fatores mais influenciam a inadimplência de empréstimos.
+    
+    7. Salvamento do Modelo
+    
+    O modelo foi salvo usando a biblioteca `joblib` para previsões futuras.
 
 ## Principais Insights
 
@@ -98,4 +98,6 @@ Este projeto demonstra o processo de análise de dados de empréstimos e constru
 
 ## Contato
 
-Para quaisquer perguntas ou mais informações, entre em contato: [pedrolouzeiro100303@gmail.com].
+Para quaisquer perguntas ou mais informações, entre em contato: 
+    Email: pedrolouzeiro100303@gmail.com
+    LinkedIn: https://www.linkedin.com/in/pedro-henrique-675b31176/
