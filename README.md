@@ -103,3 +103,7 @@ Para quaisquer perguntas ou mais informações, entre em contato:
         Email: pedrolouzeiro100303@gmail.com
         LinkedIn: https://www.linkedin.com/in/pedro-henrique-675b31176/
 
+### Próximos passos:
+
+- Otimizar criação de gráficos.
+- Criar função para Pré-Processamento dos Dados.
