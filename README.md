@@ -44,31 +44,26 @@ A parte de aprendizado de máquina é dividida em sete etapas:
     
     O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `OneHotEncoder`.
 
-    2. Padronização
+    2. Divisão de Treino, Teste e Padronização
     
-    Os dados foram padronizados usando `RobustScaler` para lidar com outliers e trazer todas as características para uma escala semelhante.
+    Os dados foram padronizados usando `RobustScaler` para lidar com outliers e trazer todas as características para uma escala semelhante. O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
 
     3. Balanceamento
     
     Para abordar o desequilíbrio de classes, foi utilizada a técnica `OverSample`, garantindo que o modelo não seja tendencioso em relação à classe majoritária.
     
-    4. Divisão de Treino e Teste
+    4. Teste de Algoritmos
     
-    O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
+    Para testar qual mais se adequa ao conjunto de dados.
     
-    5. Seleção do Modelo
+    5. Treino do Modelo
     
-    Um algoritmo Random Forest foi utilizado para a previsão. Os resultados foram:
+    Um algoritmo AdaBoost foi utilizado para a previsão. Os resultados foram:
     ```
     Relatório de Classificação:
-                  precision    recall  f1-score   support
-    
-              0       0.89      0.90      0.89       189
-              1       0.90      0.89      0.89       188
-    
-       accuracy                           0.89       377
-      macro avg       0.89      0.89      0.89       377
-    weighted avg       0.89      0.89      0.89       377
+           Curva Roc: 0.7056143114311432
+           Matriz de Confusão: [[ 51  37]
+                               [ 34 168]]
     ```
     
     6. Importância das Features
@@ -85,11 +80,10 @@ A parte de aprendizado de máquina é dividida em sete etapas:
 
 - **Pré-processamento de Dados**: Garante que o modelo possa lidar adequadamente com diferentes tipos de dados.
 - **Padronização e Balanceamento**: Melhora o desempenho do modelo garantindo que todas as características contribuam igualmente e que o modelo não seja tendencioso em relação à classe majoritária.
-- **Seleção e Avaliação do Modelo**: Usar Random Forest forneceu um modelo robusto com alta precisão, recall e f1-score, indicando sua eficácia na previsão de inadimplências.
 
 ### Impacto na Taxa de Inadimplência
 
-Com uma precisão de 89%, o modelo pode melhorar significativamente a capacidade da WBK de prever inadimplências. Ao identificar clientes de alto risco antecipadamente, a WBK pode implementar medidas para mitigar o risco, potencialmente reduzindo a taxa de inadimplência de 35% para abaixo de 25%.
+Com uma precisão de 75%, o modelo pode melhorar significativamente a capacidade da WBK de prever inadimplências. Ao identificar clientes de alto risco antecipadamente, a WBK pode implementar medidas para mitigar o risco, potencialmente reduzindo a taxa de inadimplência de 35% para abaixo de 25%.
 
 ## Conclusão
 
