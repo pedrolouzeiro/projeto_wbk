@@ -42,43 +42,43 @@ A parte de aprendizado de máquina é dividida em sete etapas:
 
     1. Pré-processamento de Dados
     
-    O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `LabelEncoder`.
+        O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `LabelEncoder`.
 
     2. Divisão de Treino, Teste
     
-    O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
+        O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
 
     3. Balanceamento
     
-    Para abordar o desequilíbrio de classes, foi utilizada a técnica `OverSample`, garantindo que o modelo não seja tendencioso em relação à classe majoritária.
+        Para abordar o desequilíbrio de classes, foi utilizada a técnica `OverSample`, garantindo que o modelo não seja tendencioso em relação à classe majoritária.
     
     4. Teste de Algoritmos
     
-    Para testar qual mais se adequa ao conjunto de dados.
+        Para testar qual mais se adequa ao conjunto de dados.
     
     5. Treino do Modelo
     
-    Um algoritmo RandomForest foi utilizado para a previsão. Os resultados foram:
-            ```
-            Relatório de Classificação:
-                                   precision    recall  f1-score   support
-        
-                             0       0.79      0.78      0.79       202
-                             1       0.78      0.80      0.79       202
-        
-                      accuracy                           0.79       404
-                     macro avg       0.79      0.79      0.79       404
-                  weighted avg       0.79      0.79      0.79       404
-         
-        
-                   Curva Roc: 0.7871287128712872
-                   Matriz de Confusão: [[157  45]
-                                       [ 41 161]]
-            ```
+        Um algoritmo RandomForest foi utilizado para a previsão. Os resultados foram:
+                
+                Relatório de Classificação:
+                                       precision    recall  f1-score   support
+            
+                                 0       0.79      0.78      0.79       202
+                                 1       0.78      0.80      0.79       202
+            
+                          accuracy                           0.79       404
+                         macro avg       0.79      0.79      0.79       404
+                      weighted avg       0.79      0.79      0.79       404
+             
+            
+                       Curva Roc: 0.7871287128712872
+                       Matriz de Confusão: [[157  45]
+                                           [ 41 161]]
+                
     
     6. Salvamento do Modelo
     
-    O modelo foi salvo usando a biblioteca `joblib` para previsões futuras.
+        O modelo foi salvo usando a biblioteca `joblib` para previsões futuras.
 
 ## Principais Insights
 
