@@ -59,22 +59,22 @@ A parte de aprendizado de máquina é dividida em sete etapas:
     5. Treino do Modelo
     
     Um algoritmo RandomForest foi utilizado para a previsão. Os resultados foram:
-    ```
-    Relatório de Classificação:
-                           precision    recall  f1-score   support
-
-                     0       0.79      0.78      0.79       202
-                     1       0.78      0.80      0.79       202
-
-              accuracy                           0.79       404
-             macro avg       0.79      0.79      0.79       404
-          weighted avg       0.79      0.79      0.79       404
- 
-
-           Curva Roc: 0.7871287128712872
-           Matriz de Confusão: [[157  45]
-                               [ 41 161]]
-    ```
+            ```
+            Relatório de Classificação:
+                                   precision    recall  f1-score   support
+        
+                             0       0.79      0.78      0.79       202
+                             1       0.78      0.80      0.79       202
+        
+                      accuracy                           0.79       404
+                     macro avg       0.79      0.79      0.79       404
+                  weighted avg       0.79      0.79      0.79       404
+         
+        
+                   Curva Roc: 0.7871287128712872
+                   Matriz de Confusão: [[157  45]
+                                       [ 41 161]]
+            ```
     
     6. Salvamento do Modelo
     
