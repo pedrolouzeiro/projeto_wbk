@@ -42,11 +42,11 @@ A parte de aprendizado de máquina é dividida em sete etapas:
 
     1. Pré-processamento de Dados
     
-    O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `OneHotEncoder`.
+    O pré-processamento de dados envolveu a transformação de variáveis categóricas usando `LabelEncoder`.
 
-    2. Divisão de Treino, Teste e Padronização
+    2. Divisão de Treino, Teste
     
-    Os dados foram padronizados usando `RobustScaler` para lidar com outliers e trazer todas as características para uma escala semelhante. O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
+    O conjunto de dados foi dividido em conjuntos de treinamento e teste usando `train_test_split` para avaliar o desempenho do modelo em dados não vistos.
 
     3. Balanceamento
     
@@ -58,19 +58,25 @@ A parte de aprendizado de máquina é dividida em sete etapas:
     
     5. Treino do Modelo
     
-    Um algoritmo AdaBoost foi utilizado para a previsão. Os resultados foram:
+    Um algoritmo RandomForest foi utilizado para a previsão. Os resultados foram:
     ```
     Relatório de Classificação:
-           Curva Roc: 0.7056143114311432
-           Matriz de Confusão: [[ 51  37]
-                               [ 34 168]]
+                           precision    recall  f1-score   support
+
+                     0       0.79      0.78      0.79       202
+                     1       0.78      0.80      0.79       202
+
+              accuracy                           0.79       404
+             macro avg       0.79      0.79      0.79       404
+          weighted avg       0.79      0.79      0.79       404
+ 
+
+           Curva Roc: 0.7871287128712872
+           Matriz de Confusão: [[157  45]
+                               [ 41 161]]
     ```
     
-    6. Importância das Features
-    
-    As características mais importantes foram identificadas e plotadas, ajudando a entender quais fatores mais influenciam a inadimplência de empréstimos.
-    
-    7. Salvamento do Modelo
+    6. Salvamento do Modelo
     
     O modelo foi salvo usando a biblioteca `joblib` para previsões futuras.
 
@@ -79,11 +85,11 @@ A parte de aprendizado de máquina é dividida em sete etapas:
 ### Importância das Etapas
 
 - **Pré-processamento de Dados**: Garante que o modelo possa lidar adequadamente com diferentes tipos de dados.
-- **Padronização e Balanceamento**: Melhora o desempenho do modelo garantindo que todas as características contribuam igualmente e que o modelo não seja tendencioso em relação à classe majoritária.
+- **Balanceamento**: Melhora o desempenho do modelo garantindo que todas as características contribuam igualmente e que o modelo não seja tendencioso em relação à classe majoritária.
 
 ### Impacto na Taxa de Inadimplência
 
-Com uma precisão de 75%, o modelo pode melhorar significativamente a capacidade da WBK de prever inadimplências. Ao identificar clientes de alto risco antecipadamente, a WBK pode implementar medidas para mitigar o risco, potencialmente reduzindo a taxa de inadimplência de 35% para abaixo de 25%.
+Com uma precisão de 79%, o modelo pode melhorar significativamente a capacidade da WBK de prever inadimplências. Ao identificar clientes de alto risco antecipadamente, a WBK pode implementar medidas para mitigar o risco, potencialmente reduzindo a taxa de inadimplência de 35% para abaixo de 25%.
 
 ## Conclusão
 
